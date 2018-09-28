@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		2C514D06215E656700C4F636 /* MGSampleFrameworkAggregate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2C514D07215E656700C4F636 /* Build configuration list for PBXAggregateTarget "MGSampleFrameworkAggregate" */;
+			buildPhases = (
+				2C514D0A215E656D00C4F636 /* Generate Framework */,
+			);
+			dependencies = (
+			);
+			name = MGSampleFrameworkAggregate;
+			productName = MGSampleFrameworkAggregate;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		2C514CF4215E5D4400C4F636 /* MGSampleFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C514CEA215E5D4400C4F636 /* MGSampleFramework.framework */; };
 		2C514CF9215E5D4400C4F636 /* MGSleepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C514CF8215E5D4400C4F636 /* MGSleepTests.swift */; };
@@ -156,6 +170,9 @@
 					2C514CF2215E5D4400C4F636 = {
 						CreatedOnToolsVersion = 10.0;
 					};
+					2C514D06215E656700C4F636 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 				};
 			};
 			buildConfigurationList = 2C514CE4215E5D4400C4F636 /* Build configuration list for PBXProject "MGSampleFramework" */;
@@ -172,6 +189,7 @@
 			targets = (
 				2C514CE9215E5D4400C4F636 /* MGSampleFramework */,
 				2C514CF2215E5D4400C4F636 /* MGSampleFrameworkTests */,
+				2C514D06215E656700C4F636 /* MGSampleFrameworkAggregate */,
 			);
 		};
 /* End PBXProject section */
@@ -192,6 +210,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C514D0A215E656D00C4F636 /* Generate Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nScripts/generate_framework.sh MGSampleFramework\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C514CE6215E5D4400C4F636 /* Sources */ = {
@@ -273,13 +312,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "$(VALID_ARCHS)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -331,13 +371,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "$(VALID_ARCHS)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -434,6 +475,24 @@
 			};
 			name = Release;
 		};
+		2C514D08215E656700C4F636 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y95LKPCREE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C514D09215E656700C4F636 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y95LKPCREE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -460,6 +519,15 @@
 			buildConfigurations = (
 				2C514D02215E5D4400C4F636 /* Debug */,
 				2C514D03215E5D4400C4F636 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C514D07215E656700C4F636 /* Build configuration list for PBXAggregateTarget "MGSampleFrameworkAggregate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C514D08215E656700C4F636 /* Debug */,
+				2C514D09215E656700C4F636 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
