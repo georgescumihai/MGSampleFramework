@@ -1,2 +1,2 @@
 # MGSampleFramework
-This is a framework which has the purpose to provide a interface to be used from different project.
+This is a framework which has the purpose to provide an interface to be used from a different project.
